@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+input,
+select,
+button,
+option {
+  font-family: 'Inter', sans-serif;
+  background-color: #09090B;
+  color: #f4f4f5;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+}
+
+input,
+select {
+  all: unset;
+}
+
+input,
+select,
+button {
+  width: 100%;
+}
+
+#app {
+  padding: 40px 20px;
+  max-width: 320px;
+  margin: auto;
+}
+
+#place {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 22px 16px;
+  font-size: 14px;
+  margin-bottom: 32px;
+}
+
+.fields {
+  display: grid;
+  gap: 8px;
+}
+
+.field-wrapper {
+  border-radius: 8px;
+  padding: 18px;
+  background-color: #09090B;
+  border: 1px solid #27272A;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color .5s;
+}
+
+.field-wrapper:hover {
+  background-color: hsl(240, 10%, 6%)
+}
+
+.field-wrapper:focus-within {
+  outline: 2px solid yellowgreen;
+}
+
+button {
+  margin-top: 12px;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  background-color: #AFF445;
+  font-weight: 500;
+  font-size: 1em;
+  color: #132F00;
+  cursor: pointer;
+  transition: background-color .5s;
+}
+
+button:hover {
+  background-color: rgb(150, 238, 19);
+}
+
+.card-bg {
+  background-color: #18181B;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1),
+    0px 4px 4px rgba(0, 0, 0, 0.1),
+    0px 2px 2px rgba(0, 0, 0, 0.1),
+    0px 0px 0px 1px rgba(0, 0, 0, 0.1),
+    inset 0px 0px 0px 1px rgba(255, 255, 255, 0.03),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  transition: background-color .5s;
+}
+
+.card-bg:hover:not(#place) {
+  background-color: #29292c;
+}
+
+main {
+  margin-top: 32px;
+}
+
+h1 {
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+section {
+  display: grid;
+  gap: 10px;
+}
+
+section input[type="checkbox"] {
+  height: 100%;
+  position: absolute;
+  inset: 0;
+}
+
+section .card-bg {
+  position: relative;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+}
+
+section .wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 2;
+}
+
+section .conteudo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+section .card-bg:has(:checked) .active,
+section .card-bg .inactive {
+  display: block;
+}
+
+section .card-bg:has(:checked) .inactive,
+section .card-bg .active {
+  display: none;
+}
+
+section .card-bg>div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cinza {
+  font-size: 14px;
+  color: #A1A1AB;
+  text-align: right;
+}
+
+time.full {
+  display: none;
+}
+
+@media (width > 1024px) {
+  #app {
+    display: flex;
+    max-width: 960px;
+    gap: 32px;
+    margin-top: .5em;
+  }
+
+  main {
+    margin-top: .8em;
+    flex: 1;
+  }
+
+  h1 {
+    text-align: left;
+    font-size: 1.8em;
+  }
+
+  section .card-bg {
+    padding: 16px;
+  }
+
+  time.short {
+    display: none;
+  }
+
+  time.full {
+    display: block;
+  }
+}
+
+.remover {
+  cursor: pointer;
+  padding: 1px 6px 3px 6px;
+  border-radius: 2px;
+  position: relative;
+  margin-left: 16px;
+}
+
+.remover path {
+  fill: #4b4b4c;
+}
+
+.remover:hover svg path {
+  fill: #CD4E32;
+}
+
+.remover:hover {
+  background-color: #434346;
+}
+
+section .card-bg {
+  animation: appear 1s;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+}
