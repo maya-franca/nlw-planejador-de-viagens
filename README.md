@@ -1,8 +1,9 @@
-# NLW Rocketseat: Planejador de viagens
+# NLW Rocketseat: Planejador de viagens 
 
 <p align="center">
   <img src=".github/assets/project-image.webp" alt="Visualização do projeto">
 </p>
+Planejador de viagens para a trilha HTML+CSS+JavaScript do evento NLW da Rocketseat.
 
 ## Adição de novas funcionalidades: 
 - Adição de sorting por data para as atividades no JavaScript, para que fiquem organizadas da mais próxima até a mais distante, sempre que a lista for atualizada; 
