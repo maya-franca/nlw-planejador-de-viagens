@@ -3,7 +3,9 @@
 <p align="center">
   <img src=".github/assets/project-image.webp" alt="Visualização do projeto">
 </p>
-Planejador de viagens para a trilha HTML+CSS+JavaScript do evento NLW da Rocketseat.
+
+Planejador de viagens para a trilha HTML+CSS+JavaScript do evento NLW da Rocketseat.   
+➡️ [Clique aqui para visualizar](https://maya-franca.github.io/nlw-planejador-de-viagens/) 
 
 ## Adição de novas funcionalidades: 
 - Adição de sorting por data para as atividades no JavaScript, para que fiquem organizadas da mais próxima até a mais distante, sempre que a lista for atualizada; 
